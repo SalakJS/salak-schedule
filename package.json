@@ -1,0 +1,28 @@
+{
+  "name": "salak-schedule",
+  "version": "1.0.0",
+  "description": "Schedule for salak.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cron-parser": "^2.5.0",
+    "ip": "^1.1.5",
+    "ms": "^2.1.1",
+    "redlock-node": "^2.1.4"
+  },
+  "devDependencies": {
+    "eslint": "^4.13.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "redis": "^2.8.0",
+    "salak": "^1.0.11"
+  }
+}
