@@ -64,7 +64,7 @@ class Task extends Service {
 
 ### schedule options
 
-- noLocker: when all tasks are at `all` mode, you can set this as true.
+- noLocker: when all tasks are at `all` mode, you can set this as true. default: false.
 - Store: for `single` or `worker`，default redisStore
 - prefix: for `single` or `worker`，default 'salakTimer'
 - options: options for Store. default app.redis
@@ -76,6 +76,17 @@ class Task extends Service {
 - key: `${module}.${taskfilename}`
 
 ### app.closeSchedules()
+
+## Write a store
+
+```javascript
+class AStore {
+  lock (key, ttl) {}
+  unlock (lock) {}
+}
+
+module.exports = AStore
+```
 
 ## License
 
