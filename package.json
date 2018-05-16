@@ -1,13 +1,14 @@
 {
   "name": "salak-schedule",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Schedule for salak.",
   "main": "index.js",
   "scripts": {
     "lint": "eslint ."
   },
   "keywords": [],
-  "author": "",
+  "author": "wengeek <wenwei897684475@gmail.com>",
+  "repository": "SalakJS/salak-schedule",
   "license": "MIT",
   "dependencies": {
     "cron-parser": "^2.5.0",
