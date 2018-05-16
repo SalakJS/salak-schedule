@@ -48,7 +48,7 @@ class Task extends Service {
     return {
       enable: true, // default true
       interval: 1000,
-      type: 'all', // single、all、worker
+      type: 'all', // single、all、worker, default 'all'
       cron: '* * * * * *', // use `cron-parser`
       cronOptions: {}
     }
@@ -64,7 +64,6 @@ class Task extends Service {
 
 ### schedule options
 
-- noLocker: when all tasks are at `all` mode, you can set this as true. default: false.
 - Store: for `single` or `worker`，default redisStore
 - prefix: for `single` or `worker`，default 'salakTimer'
 - options: options for Store. default app.redis

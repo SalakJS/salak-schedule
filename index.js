@@ -8,11 +8,33 @@ module.exports = (options = {}, app) => {
   const moduleSchedules = app.loader.loadDir(app.modules, 'schedule')
   const ctx = app.createAnonymousContext()
 
-  const { prefix, noLocker, Store } = options
+  const { prefix, Store } = options
+
+  let needLocker = false
+
+  for (let mod in moduleSchedules) {
+    const schedules = moduleSchedules[mod]
+
+    for (let key in schedules) {
+      const Schedule = schedules[key]
+
+      const timer = typeof Schedule['timer'] === 'function' ? Schedule['timer']() : {}
+
+      if (timer.type && timer.type !== 'all') {
+        needLocker = true
+        break
+      }
+    }
+
+    if (needLocker) {
+      break
+    }
+  }
+
   const timerHandler = new Timer({
     app,
     prefix,
-    noLocker,
+    needLocker,
     Store,
     options: options.options
   })

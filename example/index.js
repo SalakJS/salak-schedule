@@ -41,9 +41,7 @@ if (!app.createAnonymousContext) {
   }
 }
 
-schedule({
-  // noLocker: true
-}, app)
+schedule({}, app)
 
 setTimeout(() => {
   app.closeSchedules()

@@ -3,7 +3,7 @@ const { Service } = require('salak')
 class Test extends Service {
   static timer () {
     return {
-      interval: 1000
+      cron: '*/2 * * * * *'
     }
   }
 
