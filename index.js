@@ -52,7 +52,7 @@ module.exports = (options = {}, app) => {
           continue
         }
 
-        const schedule = new Schedule(ctx, null, mod)
+        const schedule = new Schedule(ctx, mod)
         timerHandler.handler(`${mod}.${key}`, timer, async () => {
           await schedule.run()
         })
