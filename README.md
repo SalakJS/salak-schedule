@@ -70,7 +70,7 @@ class Task extends Service {
 
 - Store: for `single` or `worker`，default redisStore
 - prefix: for `single` or `worker`，default 'salakTimer'
-- options: options for Store. default app.redis
+- options: options for Store.
 
 Timer
 
@@ -80,7 +80,7 @@ Timer
 
 - key: `${module}.${taskfilename}`
 
-### closeSchedules()
+### close()
 
 ## Write a store
 

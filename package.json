@@ -1,6 +1,6 @@
 {
   "name": "salak-schedule",
-  "version": "2.0.0-beta",
+  "version": "2.0.0-beta.1",
   "description": "Schedule for salak.",
   "main": "index.js",
   "scripts": {
