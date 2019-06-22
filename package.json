@@ -1,6 +1,6 @@
 {
   "name": "salak-schedule",
-  "version": "2.0.0-beta.2",
+  "version": "2.0.0-beta.3",
   "description": "Schedule for salak.",
   "main": "index.js",
   "scripts": {
@@ -24,6 +24,6 @@
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
     "redis": "^2.8.0",
-    "salak": "^1.0.11"
+    "salak": "^2.0.0-beta.33"
   }
 }
